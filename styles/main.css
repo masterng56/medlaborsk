@@ -880,18 +880,16 @@ footer ul {
 }
 
 @media (max-width: 1200px) {
+  .btn_call {
+    display: none;
+  }
+
   .btn_text {
     display: none;
   }
 
   .nav_list {
     column-gap: 10px;
-  }
-}
-
-@media (max-width: 1199px) {
-  .btn_call {
-    display: none;
   }
 }
 
@@ -1061,6 +1059,7 @@ footer ul {
 
   .btn_call {
     display: flex;
+    column-gap: 10px;
   }
 
   .hero_title {
