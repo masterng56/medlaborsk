@@ -694,7 +694,7 @@ body {
   margin-top: 20px;
 }
 
-.contacts_map {
+.map_non {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -707,6 +707,22 @@ body {
 
 .btn_map {
   width: 100%;
+}
+
+.map_show {
+  display: none;
+}
+
+#mymap {
+  height: 368px;
+}
+
+.map_show_active {
+  display: block;
+}
+
+.map_non_unactive {
+  display: none;
 }
 
 footer {
@@ -999,6 +1015,7 @@ footer ul {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
+    row-gap: 10px;
   }
 
   .contacts_list,
@@ -1145,11 +1162,11 @@ footer ul {
 
   .contacts_item {
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr auto;
   }
 
   .item_wrapper {
-    row-gap: 0;
+    row-gap: 10px;
   }
 }
 

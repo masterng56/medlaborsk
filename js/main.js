@@ -1,6 +1,32 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/blocks/modules/contacts/contacts.js":
+/*!*************************************************!*\
+  !*** ./src/blocks/modules/contacts/contacts.js ***!
+  \*************************************************/
+/***/ (() => {
+
+//кнопка показа карты
+jQuery(function () {
+  $('.btn_map').click(function (e) {
+    if ($(e.target) == $('.btn_map')) e.preventDefault();
+    $('.map_show').addClass('map_show_active');
+    $('.map_non').addClass('map_non_unactive');
+    console.log(e.target);
+  });
+  $(document).on('mouseup', function (e) {
+    var active = $('.btn_map');
+
+    if (active.has(e.target).length === 0) {
+      $('.map_show').removeClass('map_show_active');
+      $('.map_non').removeClass('map_non_unactive');
+    }
+  });
+});
+
+/***/ }),
+
 /***/ "./src/blocks/modules/footer/footer.js":
 /*!*********************************************!*\
   !*** ./src/blocks/modules/footer/footer.js ***!
@@ -22,7 +48,6 @@ jQuery(function () {
 
     if (active.has(e.target).length === 0) {
       $('.footer_menu_wrapper').removeClass('footer_menu_activ');
-      console.log(e.target);
     }
   });
 });
@@ -50,7 +75,6 @@ jQuery(function () {
 
     if (active.has(e.target).length === 0) {
       $('.nav_list').removeClass('nav_list_active');
-      console.log(e.target);
     }
   });
 });
@@ -197,8 +221,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_sale_sale__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_modules_sale_sale__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _modules_reviews_reviews__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! %modules%/reviews/reviews */ "./src/blocks/modules/reviews/reviews.js");
 /* harmony import */ var _modules_reviews_reviews__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_modules_reviews_reviews__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _modules_footer_footer__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! %modules%/footer/footer */ "./src/blocks/modules/footer/footer.js");
-/* harmony import */ var _modules_footer_footer__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_modules_footer_footer__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _modules_contacts_contacts__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! %modules%/contacts/contacts */ "./src/blocks/modules/contacts/contacts.js");
+/* harmony import */ var _modules_contacts_contacts__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_modules_contacts_contacts__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _modules_footer_footer__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! %modules%/footer/footer */ "./src/blocks/modules/footer/footer.js");
+/* harmony import */ var _modules_footer_footer__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_modules_footer_footer__WEBPACK_IMPORTED_MODULE_5__);
+
 
 
 
