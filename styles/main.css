@@ -1213,6 +1213,12 @@ footer ul {
     justify-self: start;
   }
 
+  .analizes {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto;
+    row-gap: 10px;
+  }
+
   footer {
     padding: 20px;
   }
@@ -1286,12 +1292,6 @@ footer ul {
 
   .analizes_hero_search input[type=text] {
     padding-left: 20px;
-  }
-
-  .analizes {
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr auto;
-    row-gap: 10px;
   }
 
   .footer_menu_logo {
