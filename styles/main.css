@@ -764,6 +764,10 @@ body {
   padding-left: 30px;
 }
 
+.analizes_hero_search input[type=text] {
+  padding-left: 30px;
+}
+
 .analizes_hero_search input[type=text]::placeholder {
   font-weight: 400;
   font-size: 20px;
@@ -775,6 +779,112 @@ body {
   font-weight: 400;
   font-size: 20px;
   line-height: 100%;
+  margin-right: 40px;
+}
+
+.analizes {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto;
+  margin-top: 10px;
+  column-gap: 10px;
+}
+
+.category {
+  position: relative;
+  margin-top: 10px;
+  padding: 30px;
+  background-color: #fff;
+  align-self: start;
+}
+
+.btn_category {
+  position: absolute;
+  top: -10px;
+  left: 0;
+  width: 100%;
+}
+
+.category_list {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  row-gap: 10px;
+  padding-top: 30px;
+}
+
+.category_limk {
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 130%;
+}
+
+.analizes_list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+
+.analizes_item {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "code code deadline price" "title title title to_cart";
+  padding: 30px;
+  background-color: #fff;
+}
+
+.analizes_title {
+  grid-area: title;
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 130%;
+}
+
+.analizes_code {
+  grid-area: code;
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 130%;
+}
+
+.analizes_deadline {
+  grid-area: deadline;
+  margin-right: 20px;
+  justify-self: end;
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+}
+
+.analizes_price {
+  grid-area: price;
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 130%;
+}
+
+.btn_to_cart {
+  grid-area: to_cart;
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 100%;
+}
+
+.btn_to_cart {
+  background-color: #fff;
 }
 
 footer {
@@ -955,6 +1065,12 @@ footer ul {
     top: 0;
     left: 0;
   }
+
+  .analizes_item {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "code deadline price" "title title to_cart";
+  }
 }
 
 @media (max-width: 1000px) {
@@ -999,6 +1115,9 @@ footer ul {
     flex-direction: column;
     align-items: start;
     border-radius: 0px 0px 12px 12px;
+    border-width: 0px 2px 2px 2px;
+    border-style: solid;
+    border-color: #BABABA;
     padding-bottom: 20px;
     z-index: 2;
   }
@@ -1078,6 +1197,22 @@ footer ul {
     padding: 20px;
   }
 
+  .category {
+    padding: 20px;
+  }
+
+  .analizes_item {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-areas: "title" "code" "deadline" "price" "to_cart";
+    padding: 20px;
+  }
+
+  .analizes_deadline {
+    margin-right: 0;
+    justify-self: start;
+  }
+
   footer {
     padding: 20px;
   }
@@ -1143,6 +1278,20 @@ footer ul {
 
   .analizes_hero_img svg {
     width: 302px;
+  }
+
+  .analizes_hero {
+    padding: 20px;
+  }
+
+  .analizes_hero_search input[type=text] {
+    padding-left: 20px;
+  }
+
+  .analizes {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto;
+    row-gap: 10px;
   }
 
   .footer_menu_logo {
@@ -1253,8 +1402,13 @@ footer ul {
 }
 
 @media (max-width: 480px) {
-  .analizes_hero_img svg {
-    width: 272px;
+  .analizes_hero_text {
+    display: none;
+  }
+
+  .analizes_hero_search button {
+    padding-left: 30px;
+    padding-right: 30px;
   }
 
   .button_wrapper {
