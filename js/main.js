@@ -1,6 +1,22 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/blocks/modules/analizes/analizes.js":
+/*!*************************************************!*\
+  !*** ./src/blocks/modules/analizes/analizes.js ***!
+  \*************************************************/
+/***/ (() => {
+
+$(document).ready(function () {
+  if ($(window).width() < 991.09) {
+    $('.btn_category').click(function (e) {
+      $('.category_list').toggleClass('category_list_activ').slideToggle(300);
+    });
+  }
+});
+
+/***/ }),
+
 /***/ "./src/blocks/modules/contacts/contacts.js":
 /*!*************************************************!*\
   !*** ./src/blocks/modules/contacts/contacts.js ***!
@@ -223,8 +239,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_reviews_reviews__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_modules_reviews_reviews__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _modules_contacts_contacts__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! %modules%/contacts/contacts */ "./src/blocks/modules/contacts/contacts.js");
 /* harmony import */ var _modules_contacts_contacts__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_modules_contacts_contacts__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _modules_footer_footer__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! %modules%/footer/footer */ "./src/blocks/modules/footer/footer.js");
-/* harmony import */ var _modules_footer_footer__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_modules_footer_footer__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _modules_analizes_analizes__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! %modules%/analizes/analizes */ "./src/blocks/modules/analizes/analizes.js");
+/* harmony import */ var _modules_analizes_analizes__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_modules_analizes_analizes__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _modules_footer_footer__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! %modules%/footer/footer */ "./src/blocks/modules/footer/footer.js");
+/* harmony import */ var _modules_footer_footer__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_modules_footer_footer__WEBPACK_IMPORTED_MODULE_6__);
+
 
 
 

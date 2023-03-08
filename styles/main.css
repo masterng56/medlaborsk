@@ -802,11 +802,10 @@ body {
   position: absolute;
   top: -10px;
   left: 0;
-  width: 100%;
+  width: 101%;
 }
 
 .category_list {
-  display: flex;
   flex-direction: column;
   list-style: none;
   row-gap: 10px;
@@ -990,6 +989,12 @@ footer ul {
 @media (min-width: 768px) {
   .container {
     max-width: 748px;
+  }
+}
+
+@media (min-width: 991.99px) {
+  .category_list {
+    display: flex;
   }
 }
 
@@ -1195,6 +1200,23 @@ footer ul {
   .contacts_map {
     background: #fff;
     padding: 20px;
+  }
+
+  .btn_category {
+    position: absolute;
+    top: -2px;
+    left: -1.7px;
+    width: 100.7%;
+  }
+
+  .category_list {
+    display: none;
+    row-gap: 15px;
+  }
+
+  .category_limk {
+    display: block;
+    padding: 10px;
   }
 
   .category {
