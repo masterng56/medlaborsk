@@ -8,11 +8,9 @@
 /***/ (() => {
 
 $(document).ready(function () {
-  if ($(window).width() < 991.09) {
-    $('.btn_category').click(function (e) {
-      $('.category_list').toggleClass('category_list_activ').slideToggle(300);
-    });
-  }
+  $('.btn_category').click(function (e) {
+    $(this).next().slideToggle(300);
+  });
 });
 
 /***/ }),

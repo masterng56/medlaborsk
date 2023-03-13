@@ -311,6 +311,7 @@ body {
 .btn_call {
   display: flex;
   column-gap: 10px;
+  display: none;
 }
 
 .header_menu {
@@ -792,24 +793,23 @@ body {
 
 .category {
   position: relative;
-  margin-top: 10px;
-  padding: 30px;
-  background-color: #fff;
   align-self: start;
 }
 
 .btn_category {
-  position: absolute;
-  top: -10px;
-  left: 0;
-  width: 101%;
+  display: none;
 }
 
 .category_list {
   flex-direction: column;
   list-style: none;
   row-gap: 10px;
-  padding-top: 30px;
+  background-color: #fff;
+  padding: 30px;
+}
+
+.category_list.category_list_active {
+  display: flex;
 }
 
 .category_limk {
@@ -880,10 +880,13 @@ body {
   font-weight: 600;
   font-size: 20px;
   line-height: 100%;
+  background-color: #fff;
 }
 
-.btn_to_cart {
-  background-color: #fff;
+.analizes_button_wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: end;
 }
 
 footer {
@@ -992,9 +995,10 @@ footer ul {
   }
 }
 
-@media (min-width: 991.99px) {
+@media (min-width: 991.09px) {
   .category_list {
     display: flex;
+    border-radius: 12px;
   }
 }
 
@@ -1025,6 +1029,16 @@ footer ul {
 @media (min-width: 1024px) {
   .container {
     max-width: 1004px;
+  }
+}
+
+@media (min-width: 1024.99px) {
+  .analizes_item {
+    grid-template-columns: 1fr 1fr auto;
+    grid-template-rows: auto 1fr;
+    grid-template-areas: "code deadline price" "title title to_cart";
+    padding: 20px;
+    row-gap: 10px;
   }
 }
 
@@ -1072,9 +1086,21 @@ footer ul {
   }
 
   .analizes_item {
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 178px;
+    grid-template-rows: auto 1fr;
     grid-template-areas: "code deadline price" "title title to_cart";
+    padding: 20px;
+    row-gap: 10px;
+  }
+
+  .btn_to_cart {
+    font-weight: 600;
+    font-size: 16px;
+  }
+
+  .btn_category:hover {
+    color: #00B8CC;
+    border: 2px solid #00B8CC;
   }
 }
 
@@ -1091,6 +1117,32 @@ footer ul {
 @media (max-width: 992px) {
   .hero_title {
     font-size: 50px;
+  }
+
+  .analizes {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto;
+    row-gap: 10px;
+  }
+
+  .analizes_item {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-areas: "title" "code" "deadline" "price" "to_cart";
+    padding: 20px;
+  }
+
+  .analizes_title {
+    margin-bottom: 10px;
+  }
+
+  .analizes_deadline {
+    margin-right: 0;
+    justify-self: start;
+  }
+
+  .btn_to_cart {
+    width: 100%;
   }
 }
 
@@ -1124,7 +1176,7 @@ footer ul {
     border-style: solid;
     border-color: #BABABA;
     padding-bottom: 20px;
-    z-index: 2;
+    z-index: 3;
   }
 
   .nav_clouse_wrapper {
@@ -1203,10 +1255,22 @@ footer ul {
   }
 
   .btn_category {
-    position: absolute;
-    top: -2px;
-    left: -1.7px;
-    width: 100.7%;
+    display: block;
+    width: 100%;
+  }
+
+  .category_list {
+    position: relative;
+    z-index: 1;
+    border-radius: 0 0 12px 12px;
+    padding: 20px;
+    margin-bottom: -20px;
+    transform: translateY(-20px);
+  }
+
+  .btn_category {
+    position: relative;
+    z-index: 2;
   }
 
   .category_list {
@@ -1216,29 +1280,7 @@ footer ul {
 
   .category_limk {
     display: block;
-    padding: 10px;
-  }
-
-  .category {
-    padding: 20px;
-  }
-
-  .analizes_item {
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(5, 1fr);
-    grid-template-areas: "title" "code" "deadline" "price" "to_cart";
-    padding: 20px;
-  }
-
-  .analizes_deadline {
-    margin-right: 0;
-    justify-self: start;
-  }
-
-  .analizes {
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr auto;
-    row-gap: 10px;
+    padding: 10px 10px 10px 0;
   }
 
   footer {
