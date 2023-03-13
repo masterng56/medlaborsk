@@ -526,6 +526,7 @@ body {
 
 .sale_swiper {
   overflow: hidden;
+  margin-top: 10px;
 }
 
 .sale_card {
@@ -887,6 +888,36 @@ body {
   display: flex;
   justify-content: center;
   align-items: end;
+}
+
+.actions_hero_item svg {
+  margin-bottom: -6px;
+}
+
+.actions {
+  margin-top: 10px;
+}
+
+.actions_wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.action_wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.actions_price {
+  font-size: 16px;
+  color: #E80055;
+  margin-top: 20px;
+}
+
+.actions_title {
+  margin-top: 4px;
 }
 
 footer {
@@ -1283,6 +1314,13 @@ footer ul {
     padding: 10px 10px 10px 0;
   }
 
+  .actions_wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(5, 1fr);
+    gap: 10px;
+  }
+
   footer {
     padding: 20px;
   }
@@ -1356,6 +1394,20 @@ footer ul {
 
   .analizes_hero_search input[type=text] {
     padding-left: 20px;
+  }
+
+  .hero.actions_hero {
+    padding-bottom: 0;
+  }
+
+  .actions_hero_item svg {
+    margin-bottom: -6px;
+    width: 300px;
+    height: auto;
+  }
+
+  .actions_text {
+    padding: 20px;
   }
 
   .footer_menu_logo {
@@ -1473,6 +1525,23 @@ footer ul {
   .analizes_hero_search button {
     padding-left: 30px;
     padding-right: 30px;
+  }
+
+  .hero.actions_hero {
+    padding-bottom: 0;
+  }
+
+  .actions_hero_item svg {
+    margin-bottom: -6px;
+    width: 272px;
+    height: auto;
+  }
+
+  .actions_wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(12, 1fr);
+    gap: 10px;
   }
 
   .button_wrapper {
