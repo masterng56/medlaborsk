@@ -468,9 +468,11 @@ body {
   row-gap: 20px;
 }
 
-.text_wrapper {
+.card .text_wrapper {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: start;
   row-gap: 10px;
 }
 
