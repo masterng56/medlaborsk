@@ -1206,8 +1206,8 @@ body {
 
 .about_text_wrapper {
   display: grid;
-  grid-template-columns: 1fr;
   grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
   column-gap: 10px;
   margin-top: 10px;
 }
@@ -1217,10 +1217,12 @@ body {
 }
 
 .about_partner {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
   background-color: #fff;
   padding: 30px;
+  padding-bottom: 0;
 }
 
 .svg_wrapper {
@@ -1228,6 +1230,56 @@ body {
   grid-template-columns: 1fr;
   grid-template-columns: 1fr;
   justify-items: center;
+}
+
+.about_partner svg {
+  align-self: center;
+  justify-self: center;
+}
+
+.about_slider {
+  margin-top: 10px;
+  overflow: hidden;
+}
+
+.about_slider_swiper {
+  height: 500px;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  height: auto;
+}
+
+.about_slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.nav_slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.slider {
+  display: flex;
+  flex-direction: column;
+}
+
+.about_slider_nav {
+  margin-top: 10px;
+  overflow: hidden;
+  height: 100%;
+  flex-shrink: 0;
 }
 
 footer {
@@ -1693,6 +1745,15 @@ footer ul {
     row-gap: 10px;
   }
 
+  .about_text_wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    column-gap: 0;
+    row-gap: 10px;
+    margin-top: 10px;
+  }
+
   footer {
     padding: 20px;
   }
@@ -1780,6 +1841,15 @@ footer ul {
 
   .actions_text {
     padding: 20px;
+  }
+
+  .about_item,
+  .about_partner {
+    padding: 20px;
+  }
+
+  .about_partner {
+    padding-bottom: 0;
   }
 
   .footer_menu_logo {
