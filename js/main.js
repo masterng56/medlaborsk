@@ -15,21 +15,18 @@ var sliderMain = new Swiper(swiperMain, {
   loopedSlides: 5,
   thumbs: {
     swiper: swiperNav
-  } // breakpoints: {
-  //     360: {
-  //         slidesPerView: 1.15,
-  //     },
-  //     480: {
-  //         slidesPerView: 1.5,
-  //     },
-  //     767: {
-  //         slidesPerView: 2,
-  //     },
-  //     1024: {
-  //         slidesPerView: 3,
-  //     }
-  // }
-
+  },
+  breakpoints: {
+    360: {
+      slidesPerView: 1.15
+    },
+    480: {
+      slidesPerView: 1.5
+    },
+    768: {
+      slidesPerView: 1
+    }
+  }
 });
 var thumbNav = new Swiper(swiperNav, {
   slidesPerView: 5,
@@ -38,21 +35,7 @@ var thumbNav = new Swiper(swiperNav, {
   freeMode: true,
   watchSlidesVisibility: true,
   watchSlidesProgress: true,
-  loop: true // breakpoints: {
-  //     360: {
-  //         slidesPerView: 1.15,
-  //     },
-  //     480: {
-  //         slidesPerView: 1.5,
-  //     },
-  //     767: {
-  //         slidesPerView: 2,
-  //     },
-  //     1024: {
-  //         slidesPerView: 3,
-  //     }
-  // }
-
+  loop: true
 });
 
 /***/ }),
