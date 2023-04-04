@@ -1326,6 +1326,80 @@ body {
   flex-shrink: 0;
 }
 
+.useful_hero {
+  padding-bottom: 0;
+}
+
+.useful h3 {
+  margin-left: 20px;
+}
+
+.useful_results h3 {
+  margin-left: 0;
+}
+
+.useful_preparation {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  column-gap: 10px;
+  padding-top: 10px;
+}
+
+.useful_preparation_item {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  column-gap: 10px;
+  background-color: #fff;
+  padding: 30px;
+}
+
+.useful_results {
+  background-color: #fff;
+  margin-top: 10px;
+  padding: 30px;
+}
+
+.useful_result_wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  column-gap: 40px;
+  margin-top: 20px;
+}
+
+.useful_result_item {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+
+.result_item_text,
+.refund_item_text {
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 130%;
+}
+
+.refund_wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  column-gap: 10px;
+  margin-top: 10px;
+}
+
+.refund_item {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  background-color: #fff;
+  padding: 30px;
+}
+
 footer {
   position: relative;
   background: #263238;
@@ -1805,6 +1879,30 @@ footer ul {
     grid-template-rows: repeat(3, 1fr);
   }
 
+  .useful_preparation {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    column-gap: 10px;
+    row-gap: 10px;
+  }
+
+  .useful_preparation_item {
+    padding: 20px;
+  }
+
+  .useful_results {
+    padding: 20px;
+  }
+
+  .useful_result_wrapper {
+    column-gap: 20px;
+  }
+
+  .refund_item {
+    padding: 20px;
+  }
+
   footer {
     padding: 20px;
   }
@@ -2162,6 +2260,31 @@ footer ul {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(12, 1fr);
     gap: 10px;
+  }
+
+  .useful_preparation {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+
+  .useful_result_wrapper {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: auto auto auto;
+    row-gap: 20px;
+  }
+
+  .refund_wrapper {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: auto auto;
+    row-gap: 10px;
+  }
+
+  .useful .lines {
+    display: none;
+  }
+
+  .useful h3 {
+    margin-top: 10px;
   }
 
   .button_wrapper {
