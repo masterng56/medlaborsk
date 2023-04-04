@@ -1400,6 +1400,30 @@ body {
   padding: 30px;
 }
 
+.preparation_research {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.research_item {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  column-gap: 10px;
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 30px;
+}
+
+.preparation_title {
+  margin-bottom: 10px;
+  margin-left: 20px;
+  font-style: normal;
+}
+
 footer {
   position: relative;
   background: #263238;
@@ -1903,6 +1927,15 @@ footer ul {
     padding: 20px;
   }
 
+  .research_item {
+    padding: 20px;
+  }
+
+  .preparation_research {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+
   footer {
     padding: 20px;
   }
@@ -2071,6 +2104,10 @@ footer ul {
   .analiz_price_text {
     font-size: 50px;
   }
+
+  .useful_hero {
+    padding-bottom: 0;
+  }
 }
 
 @media (max-width: 767.09px) {
@@ -2232,6 +2269,19 @@ footer ul {
 
   .btn_analiz_price {
     font-size: 16px;
+  }
+
+  .preparation_research {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+
+  .lines {
+    display: none;
+  }
+
+  .preparation_title {
+    margin-top: 10px;
   }
 }
 
