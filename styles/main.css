@@ -1557,6 +1557,12 @@ footer ul {
   cursor: pointer;
 }
 
+.btn_cart {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+}
+
 @media (min-width: 360px) {
   .container {
     max-width: 356px;
@@ -2018,6 +2024,18 @@ footer ul {
 
   .btn_clouse_footer {
     display: block;
+  }
+
+  .btn_menu {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+  }
+
+  .btn_cart {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
   }
 }
 
