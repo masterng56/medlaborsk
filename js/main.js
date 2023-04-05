@@ -18,10 +18,16 @@ var sliderMain = new Swiper(swiperMain, {
   },
   breakpoints: {
     360: {
-      slidesPerView: 1.15
+      slidesPerView: 1.15,
+      autoplay: {
+        delay: 5000
+      }
     },
     480: {
-      slidesPerView: 1.5
+      slidesPerView: 1.5,
+      autoplay: {
+        delay: 5000
+      }
     },
     768: {
       slidesPerView: 1
