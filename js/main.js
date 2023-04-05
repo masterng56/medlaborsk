@@ -141,6 +141,9 @@ jQuery(function () {
 /***/ (() => {
 
 var swiper = new Swiper('.reviews_slider', {
+  autoplay: {
+    delay: 5000
+  },
   slidesPerView: 3,
   spaceBetween: 10,
   breakpoints: {
@@ -225,6 +228,9 @@ var swiper = new Swiper('.sale_swiper', {
 /***/ (() => {
 
 var swiper = new Swiper('.popular_analizes_swiper', {
+  autoplay: {
+    delay: 5000
+  },
   centerMode: false,
   simulateTouch: true,
   touchAngle: 35,
